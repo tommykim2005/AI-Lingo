@@ -1,12 +1,83 @@
-@import url(https://db.onlinewebfonts.com/c/14936bb7a4b6575fd2eee80a3ab52cc2?family=Feather+Bold);
-@import url(https://db.onlinewebfonts.com/c/ab596f21664c5582567537d241e2a53e?family=DIN+Next+Rounded+LT+W01+Regular);
+@import url('https://db.onlinewebfonts.com/c/14936bb7a4b6575fd2eee80a3ab52cc2?family=Feather+Bold');
+@import url('https://db.onlinewebfonts.com/c/ab596f21664c5582567537d241e2a53e?family=DIN+Next+Rounded+LT+W01+Regular');
 
 @import "tailwindcss";
 
-@theme{
-    --color-duolingo-blue: #1cb0f6;
-    --color-duolingo-blue-dark: #0F82C7;
-    --color-duolingo-blue-light: #D0F0FF;
+/* Tailwind v4 theme tokens */
+@theme {
+  --font-duolingo: 'Feather Bold', sans-serif;
+  --font-sans: 'DIN Next Rounded LT W01 Regular', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';
 
-    --font-duolingo: Feather Bold;
+  --color-duolingo-blue: #1CB0F6;
+  --color-duolingo-blue-dark: #0F82C7;
+  --color-duolingo-blue-light: #D6F1FF;
+  --color-duolingo-ink: #103B5A;
+  --color-duolingo-green: #58CC02;
+  --color-duolingo-teal: #1EC5C3;
+  --color-duolingo-purple: #7B61FF;
+  --color-duolingo-orange: #FF8A34;
+  --color-duolingo-pink: #FF6FAF;
+  --color-duolingo-yellow: #FFD635;
+  --color-duolingo-red: #FF4B4B;
+  --color-duolingo-gray: #777777;
+  --color-duolingo-gray-light: #F5F5F5;
+
+  --shadow-duolingo: 0 4px 8px rgba(0,0,0,0.1);
+  --shadow-duolingo-md: 0 8px 16px rgba(0,0,0,0.15);
+  --shadow-duolingo-xl: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+/* Dark mode removed by request */
+
+:root {
+  --color-duolingo-blue: #1CB0F6;
+  --color-duolingo-blue-dark: #0F82C7;
+  --color-duolingo-blue-light: #D6F1FF;
+  --color-duolingo-ink: #103B5A;
+  --color-duolingo-green: #1CB0F6; /* repurposed to blue for cohesive look */
+  --color-duolingo-red: #FF4B4B;
+  --color-duolingo-yellow: #FFD935;
+  --color-duolingo-gray: #6E7B87;
+  --color-duolingo-gray-light: #F4F8FB;
+}
+
+body {
+  margin: 0;
+  font-family: 'DIN Next Rounded LT W01 Regular', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font-duolingo {
+  font-family: 'Feather Bold', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-40px) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+
+.animate-confetti {
+  display: inline-block;
+  animation-name: confetti-fall;
+  animation-timing-function: ease-in;
 }

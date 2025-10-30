@@ -24,21 +24,47 @@ Our project seeks to bridge this gap by creating an inclusive learning platform 
 
 ## Installation
 
-1. Make sure you have [Node.js](https://nodejs.org/) installed. If not, download and install it first.
+1. Make sure you have [Node.js](https://nodejs.org/) installed.
 2. Clone the repository:
-```git clone https://github.com/adrianpar1/AI-Lingo.git```
-3. Navigate to the project directory:
-```cd ai-lingo```
+```bash
+git clone https://github.com/adrianpar1/AI-Lingo.git
+```
+3. Navigate to the app directory:
+```bash
+cd AI-Lingo/ai-lingo
+```
 4. Install dependencies:
-```npm install```
+```bash
+npm install
+```
 5. Run the development server:
-```npm run dev```
+```bash
+npm run dev
+```
 
 
 ## 🚀 Usage
 
 Once the server is running, open your browser and go to:
 http://localhost:5173
+
+## App Structure
+
+- src/components/
+  - Layout.jsx, NavBar.jsx, Logo.jsx – app shell and navigation
+  - Shared UI: Button.jsx, card.jsx, alert.jsx, Hero.jsx
+- src/pages/
+  - Home.jsx – landing page with CTA
+  - Lessons.jsx – learning experience
+  - Login.jsx – auth
+- src/lib/
+  - lessons.js, types.js – lesson content and types
+
+## Scripts
+
+- npm run dev – start Vite dev server
+- npm run build – production build
+- npm run preview – preview production build
 
 Explore the platform and start learning digital skills interactively.
 
