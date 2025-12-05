@@ -66,13 +66,5 @@ http://localhost:5173
 - npm run build – production build
 - npm run preview – preview production build
 
-Explore the platform and start learning digital skills interactively.
 
-## Contributing
-
-We welcome contributions! Please open an issue or submit a pull request for new features, bug fixes, or improvements.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
 
